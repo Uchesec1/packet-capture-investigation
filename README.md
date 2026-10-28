@@ -18,7 +18,7 @@ picked out the unusually long names.
 This matches DNS tunnelling, where stolen data is hidden inside DNS
 lookups, because DNS is usually allowed out of a network.
 
-![DNS lookups with long random subdomains](screenshots/01-dns-tunnelling.png)
+![DNS lookups with long random subdomains](Screenshots/01-dns-tunnelling.png)
 
 ### 2. Port scan
 Filtering on `tcp.flags.syn==1` showed 10.0.2.15 sending SYN packets
@@ -27,7 +27,7 @@ were tried roughly in order, which suggests a deliberate scan. Only
 three ports replied with a SYN-ACK: 22 (SSH), 80 (HTTP) and 3389 (RDP).
 This is reconnaissance: the scanner learned which services were running.
 
-![SYN packets from one machine to many ports](screenshots/02-port-scan.png)
+![SYN packets from one machine to many ports](Screenshots/02-port-scan.png)
 
 ### 3. Plaintext login
 Filtering on `http` and following the HTTP stream showed a login sent to
@@ -36,7 +36,7 @@ username and password were readable in the request, and the server
 replied with a redirect to `/dashboard`, so the login worked.
 (I have left the password out of this write-up.)
 
-![Login sent over HTTP, password hidden](screenshots/03-plaintext-login.png)
+![Login sent over HTTP, password hidden](Screenshots/03-plaintext-login.png)
 
 ## My reasoning
 
