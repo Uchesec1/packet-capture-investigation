@@ -12,8 +12,7 @@ Filtering on `dns` showed the computer at 10.0.2.15 sending dozens of
 lookups with long, random-looking subdomains of one domain,
 `sync-update-cdn.info`. Every lookup resolved to the same address,
 10.10.10.10. A normal lookup in the same capture, for `github.com`,
-resolved to a real public address. The filter `dns.qry.name.len > 40`
-picked out the unusually long names.
+resolved to a real public address.
 
 This matches DNS tunnelling, where stolen data is hidden inside DNS
 lookups, because DNS is usually allowed out of a network.
